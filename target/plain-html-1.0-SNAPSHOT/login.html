@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="assets/css/login.css" />
+    <script src="utils.js" charset="utf-8" defer></script>
+    <script src="loginManagement.js" charset="utf-8" defer></script>
+    <script src="loginUtils.js" charset="utf-8" defer></script>
+</head>
+<body>
+    <div id="background-image"></div>
+    <div id="error" class="">
+        <p id="errormessage"></p>
+    </div>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="user_card">
+                <div class="d-flex justify-content-center">
+                    <div class="brand_logo_container">
+                        <img src="./assets/img/logo/logo.png" class="brand_logo" alt="Logo">
+                    </div>
+                </div>
+                <div id="login-container">
+                    <div class="d-flex justify-content-center form_container">
+                        <form action="#" method="post" class="">
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" name="email" id="email" class="form-control" placeholder="Email..." required>
+                            </div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="psw" id="psw" class="form-control" value="" placeholder="Password..." required>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 login_container">
+                                <button type="button" name="loginbutton" id="loginbutton" class="btn login_btn">Login</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Don't have an account? <a onclick="toggleForm()" href="#" class="ml-2">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="register-container" style="display: none">
+                    <div class="d-flex justify-content-center form_container">
+                        <form action="#" method="post" class="">
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" name="email" class="form-control" value="" placeholder="Email" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="psw" class="form-control" value="" placeholder="Password" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input type="password" name="psw-conf" class="form-control" value="" placeholder="Conferma password" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" name="name" class="form-control" value="" placeholder="Nome" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" name="surname" class="form-control" value="" placeholder="Cognome" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" name="cf" class="form-control" value="" placeholder="Codice fiscale" required>
+                            </div>
+                            <div class="d-flex justify-content-center mt-3 login_container">
+                                <button type="button" id="registerbutton" name="button" class="btn login_btn">Register</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Already have an account? <a onclick="toggleForm()" href="#" class="ml-2">Sign In</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Offerte</title>
+</head>
+<body>
+<div id="auctions">
+    <h1>Dettagli asta <span th:text="${auction.getAuctionID()}"></span></h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID Prodotto</th>
+                <th>Nome Prodotto</th>
+                <th>Prezzo Iniziale</th>
+                <th>Offerta Minima</th>
+                <th>Scadenza</th>
+                <th>Immagine</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${auction.getProduct().getProductID()}">Onions</td>
+                <td th:text="${auction.getProduct().getName()}">Onions</td>
+                <td th:text="${auction.getInitialPrice()}">Onions</td>
+                <td th:text="${auction.getMinRaise()}">Onions</td>
+                <td th:text="${dateManipulator.fancyDateToString(auction.getExpiration())}">Onions</td>
+                <td><img th:src="*{'data:image/png;base64,'+auction.getProduct().printImageToBase64()}" alt="" style="width: 100px;height: 100px;"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="bids" th:if="${!bids.isEmpty() && !auction.getClosed()}">
+    <h1>Offerte</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Prezzo offerto</th>
+            <th>Data</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="bid : ${bids}">
+            <td th:text="${bid.getUserEmail()}">Onions</td>
+            <td th:text="${bid.getValue()}">Onions</td>
+            <td th:text="${dateManipulator.fancyDateToString(bid.getDate())}">Onions</td>
+        </tr>
+        </tbody>
+    </table>
+    <div id="insert-bid">
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+it\polimi\tiw\plain_html\utils\DateManipulator.class
+it\polimi\tiw\plain_html\controllers\auction\CloseAuction.class
+it\polimi\tiw\plain_html\dao\AuctionDAO.class
+it\polimi\tiw\plain_html\controllers\BuyServlet.class
+it\polimi\tiw\plain_html\controllers\user\LoginServlet.class
+it\polimi\tiw\plain_html\controllers\user\RegisterServlet.class
+it\polimi\tiw\plain_html\beans\AuctionBean.class
+it\polimi\tiw\plain_html\beans\UserBean.class
+it\polimi\tiw\plain_html\dao\UserDAO.class
+it\polimi\tiw\plain_html\beans\ProductBean.class
+it\polimi\tiw\plain_html\controllers\auction\InsertAuction.class
+it\polimi\tiw\plain_html\controllers\IndexServlet.class
+it\polimi\tiw\plain_html\controllers\auction\DetailsAuction.class
+it\polimi\tiw\plain_html\controllers\bid\InsertBid.class
+it\polimi\tiw\plain_html\beans\BidBean.class
+it\polimi\tiw\plain_html\controllers\SellServlet.class
+it\polimi\tiw\plain_html\dao\BidDao.class

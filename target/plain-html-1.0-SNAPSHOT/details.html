@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!-- saved from url=(0107)file:///C:/Users/lucal/Downloads/constructioncompany-master/constructioncompany-master/project_details.html -->
+<html xmlns:th="http://www.thymeleaf.org" class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers" lang="zxx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Construction HTML-5 Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/plain-html/assets/home_files/bootstrap.min.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/owl.carousel.min.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/slicknav.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/animate.min.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/magnific-popup.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/themify-icons.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/slick.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/nice-select.css">
+    <link rel="stylesheet" href="/plain-html/assets/home_files/style.css">
+
+   </head>
+
+   <body style="overflow: visible;">
+    <!-- Preloader Start -->
+    <div id="preloader-active" style="display: none;">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/plain-html/assets/home_files/loder-logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header ">
+
+                <div class="header-bottom  header-sticky" style="
+    padding: 10px;
+">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <div class="logo">
+                                    <!-- logo-1 -->
+                                    <a href="/plain-html/home" class="big-logo"><img src="/plain-html/assets/home_files/logo_white.png" alt="" style="
+    width: 100px;
+">
+                                        <h1 style="
+                                        color: white;
+                                        font-size: 30px;
+                                        padding: 20px;
+                                        display: inline-block;
+                                    ">Il Mondo delle Aste</h1>
+                                    </a>
+                                    <!-- logo-2 -->
+                                    <a href="/plain-html/home" class="small-logo"><img src="/plain-html/assets/home_files/loder-logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="/plain-html/home">Home</a></li>
+                                            <li><a href="/plain-html/sell">Vendi</a></li>
+                                            <li><a href="/plain-html/buy">Acquista</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4">
+                                <div class="header-right-btn f-right d-none d-lg-block">
+                                    <p style="
+                                    float: left;
+                                    color: white;
+                                    padding-right: 50px;
+                                    padding-top: 10px;
+                                ">Benvenuto <span th:text="${user.getName()}"></span> <span th:text="${user.getSurname()}"></span></p>
+                                    <a href="/plain-html/user/login" class="btn" style="
+    /* float: left; */
+">Cambia account</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!-- slider Area Start-->
+        <div class="slider-area ">
+            <div id="top-div" class="single-slider hero-overly slider-height2 d-flex align-items-center" style="background: url(/plain-html/assets/img/details.jpg) no-repeat; background-size: cover;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap pt-100">
+                                <h2>Dettagli</h2>
+                                <nav aria-label="breadcrumb ">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="/plain-html/home">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Dettagli</a></li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slider Area End-->
+        <!-- Services Details Start -->
+        <div class="services-details-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-50">
+                        <div class="single-services" style="padding-top:30px;">
+                            <div class="details-img mb-40">
+                                <h1 th:text="'#'+${auction.getProduct().getProductID()}+' - '+${auction.getProduct().getName()}">#15 - Banane</h1>
+                                <img th:if="imageBase64 != null" th:src="*{'data:image/png;base64,'+imageBase64}" alt="" style="width: 400px;height: 400px;margin-top: 20px;margin-left: 35%;"/>
+                                <img th:if="imageBase64 == null" th:src="'url(/plain-html/assets/img/logo/logo.png)'" alt="" style="width: 400px;height: 400px;margin-top: 20px;margin-left: 35%;"/>
+                                <h4 th:text="'Prezzo iniziale: '+${auction.getInitialPrice()}"></h4>
+                                <h4 th:text="'Rilancio minimo: '+${auction.getMinRaise()}"></h4>
+                                <h4 th:if="${!auction.getClosed()}" th:text="'Offerta massima: '+${auction.getMaxBid()==null ? 0.0 : auction.getMaxBid()}"></h4>
+                                <h4 th:text="'Scadenza: '+${auction.getClosed() ? dateManipulator.fancyDateToString(auction.getExpiration()) : dateManipulator.dateDifferenceToString(auction.getExpiration().getTime()-currTime)}"></h4>
+                                <h4 th:if="${auction.getClosed() && winnerBid!=null}" th:text="'Aggiudicatario: '+${winnerBid.getUserEmail()}"></h4>
+                                <h4 th:if="${auction.getClosed() && winnerBid!=null}" th:text="'Prezzo finale: '+${winnerBid.getValue()}"></h4>
+                                <h4 th:if="${auction.getClosed() && winnerBid!=null}" th:text="'Indirizzo: '+${winnerBid.getAddress()}"></h4>
+                                <h4>Descrizione:</h4><p th:text="${auction.getProduct().getDescription()}"></p>
+                            </div>
+                            <div class="details-caption">
+                                <h1>Offerte</h1>
+                                <div class="">
+                                    <div class="progress-table">
+                                        <div class="table-head row">
+                                            <div class="product-name-open col-md-4 border-right border-left">Utente</div>
+                                            <div class="product-name-open col-md-4 border-right border-left">Prezzo offerto</div>
+                                            <div class="expiration-open col-md-4 border-right border-left">Data</div>
+                                        </div>
+                                        <div class="table-row row" th:each="bid : ${bids}">
+                                            <div class="product-id-open col-md-4 border-right border-left">
+                                                <p th:text="${bid.getUserEmail()}"></p>
+                                            </div>
+                                            <div class="product-name-open col-md-4 border-right border-left">
+                                                <p th:text="${bid.getValue()}"></p>
+                                            </div>
+                                            <div class="product-name-open col-md-4 border-right border-left">
+                                                <p th:text="${dateManipulator.fancyDateToString(bid.getDate())}"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="close-auction"
+                                     th:if="${auction.getCreator()==user.getUserID() && !auction.getClosed() && currTime > auction.getExpiration().getTime()}">
+                                    <form method="post" action="/plain-html/auction/close" class="mb-50">
+                                        <input type="hidden" id="auctionID" name="auctionID" th:value="${auction.getAuctionID()}">
+                                        <input type="submit">Chiudi Asta</input>
+                                    </form>
+                                </div>
+                                <div id="make-bid" th:if="${auction.getCreator()!=user.getUserID() && !auction.getClosed()}">
+                                    <form method="post" action="/plain-html/bid/add" class="mb-50">
+                                        <input type="hidden" id="auction-id-for-bid" name="auction-id-for-bid" th:value="${auction.getAuctionID()}">
+                                        <input type="text" id="value" name="value"/><label for="value">Value</label>
+                                        <input type="text" id="address" name="address"/><label for="address">Address</label>
+                                        <input type="submit" value="Inserisci">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Services Details End -->
+
+    </main>
+    <!-- JS here -->
+
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="./assets/home_files/modernizr-3.5.0.min.js.download"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/home_files/jquery-1.12.4.min.js.download"></script>
+    <script src="./assets/home_files/popper.min.js.download"></script>
+    <script src="./assets/home_files/bootstrap.min.js.download"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/home_files/jquery.slicknav.min.js.download"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/home_files/owl.carousel.min.js.download"></script>
+    <script src="./assets/home_files/slick.min.js.download"></script>
+    <!-- Date Picker -->
+    <script src="./assets/home_files/gijgo.min.js.download"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/home_files/wow.min.js.download"></script>
+    <script src="./assets/home_files/animated.headline.js.download"></script>
+    <script src="./assets/home_files/jquery.magnific-popup.js.download"></script>
+
+    <!-- Scrollup, nice-select, sticky -->
+    <script src="./assets/home_files/jquery.scrollUp.min.js.download"></script>
+    <script src="./assets/home_files/jquery.nice-select.min.js.download"></script>
+    <script src="./assets/home_files/jquery.sticky.js.download"></script>
+
+    <!-- counter , waypoint -->
+    <script src="./assets/home_files/waypoints.min.js.download"></script>
+    <script src="./assets/home_files/jquery.counterup.min.js.download"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/home_files/plugins.js.download"></script>
+    <script src="./assets/home_files/main.js.download"></script>
+
+    <div id="error" class="alert alert-danger error" th:if="${error != null}" style=" z-index: 2147483646; display: block;bottom: 10px;
+    width: 80%;
+    position: fixed;
+    text-align: center;
+    left: 10%;
+    height: 50px;">
+        <p th:text="${error.toString()}"></p>
+    </div>
+    <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="ti-arrow-up"></i></a>
+</body></html>
